@@ -1,38 +1,46 @@
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+  background : url('http://static1.360vrs.com/pano-content/judith-stone-at-sunset-east-farndon/640px-360-panorama.jpg');
+  -webkit-animation: backgroundScroll 20s linear infinite;
+  animation: backgroundScroll 20s linear infinite;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   }
+  
+  @-webkit-keyframes backgroundScroll {
+  from {background-position: 0 0;}
+  to {background-position: -400px 0;}
+  }
+          
+  @keyframes backgroundScroll {
+  from {background-position: 0 0;}
+  to {background-position: -400px 0;}
+  }
+.filter{
+  width:50%;
+  display:flex ;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.movieList{
+  display:flex;
+  flex-wrap: wrap;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  column-gap: 5%;
 }
-
-.App-link {
-  color: #61dafb;
+.rate{
+  color :gold;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+p.card-text {
+  height: 95px;
+  overflow: hidden;
+}
+img.card-img-top {
+  height: 300px;
+}
+.card{
+  width: 18rem;
+    height: 510px;
+    margin: 20px;
+    justify-content: center;
 }
